@@ -16,9 +16,9 @@
       var fav_color = $("#fav_color").val();
       var highlight = $("#highlight").val();
       var style = $("#font_style").val();
-      var conte
+      var card = "My name is " + name + "." + " You can call me: "+ nickname + "." + " I am best known for being: " + highlight + ".";
       $('div').slideUp();
-      $('body').html(name).css("font-size", size);
+      $('body').html(card).css({"font-size": size, "font-family": style} );
       $('body').css({"background-color": fav_color});
 
 
@@ -39,7 +39,8 @@
       NAME'S FONT SIZE:<input type = 'text' name = 'name_fontsize' placeholder = '12px' id = "size" required><br>
       FONT STYLE:<input type = 'radio' name= 'font-style' id = "font_style">Serif
       <input type = 'radio' name= 'font-style' id = "font_style">Sans-Serif<br>
-  <button>Click here to see your carrd!</button>
+  <button>Click here to see your card!</button>
+  <p></p>
       </div>
   
   </body>
