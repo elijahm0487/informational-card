@@ -10,14 +10,17 @@
     
     $(function(){
       $('button').click(function() {
-      var name = $('#name').val()
-      var size = ('#size').val()
-      var nickname = $("#nickname").val()
-      var fav_color = $("#fav_color").val()
-      var highlight = $("#highlight").val()
-      var style = $("#font_style").val()
-      $('div').empty();
-      $('#name').html().css({"font-size": "#size"});
+      var name = $('#name').val();
+      var size = $('#size').val();
+      var nickname = $("#nickname").val();
+      var fav_color = $("#fav_color").val();
+      var highlight = $("#highlight").val();
+      var style = $("#font_style").val();
+      var conte
+      $('div').slideUp();
+      $('body').html(name).css("font-size", size);
+      $('body').css({"background-color": fav_color});
+
 
         
         
@@ -29,14 +32,14 @@
   <body>
     <div>
     <h1>Welcome to the informational card generator! Just respond to all the questions and your card will be generated accordingly.</h1>
-      NAME:<input type = "text" name = "Name" placeholder = "Bob" required><br>
-      NICKNAME:<input type ="text" name = "nickname" placeholder = "The Builder" required><br>
-      FAVORITE COLOR: <input type = 'text' name = 'fav_color' placeholder = 'Red'><br>
-      HIGHLIGHT:<input type = 'text' name = "highlight" placeholder = "6x NBA MVP" required><br>
-      NAME'S FONT SIZE:<input type = 'text' name = 'name_fontsize' placeholder = '12px' required><br>
-      FONT STYLE:<input type = 'radio' name= 'font-style'>Serif
-      <input type = 'radio' name= 'font-style'>Sans-Serif<br>
-      <input type = 'submit' name = 'button' value = 'GENERATE'>
+      NAME:<input type = "text" name = "Name" placeholder = "Bob" id = "name" class = "content" required><br>
+      NICKNAME:<input type ="text" name = "nickname" placeholder = "The Builder" id = "nickname" class = "content" required><br>
+      FAVORITE COLOR: <input type = 'text' name = 'fav_color' placeholder = 'Red' id = "fav_color" class = "content"><br>
+      HIGHLIGHT:<input type = 'text' name = "highlight" placeholder = "6x NBA MVP" id = "highlight" class = "content" required><br>
+      NAME'S FONT SIZE:<input type = 'text' name = 'name_fontsize' placeholder = '12px' id = "size" required><br>
+      FONT STYLE:<input type = 'radio' name= 'font-style' id = "font_style">Serif
+      <input type = 'radio' name= 'font-style' id = "font_style">Sans-Serif<br>
+  <button>Click here to see your carrd!</button>
       </div>
   
   </body>
